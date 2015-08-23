@@ -1,0 +1,16 @@
+{
+  "name": "quick-sort",
+  "version": "0.0.0",
+  "description": "Quick Sort implementation",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  },
+  "author": {
+    "name": "Tatsuya Oiwa",
+    "email": "tatsuyaoiw@gmail.com"
+  },
+  "license": "MIT"
+}
