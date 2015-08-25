@@ -11,6 +11,7 @@ function partition(arr, left, right) {
   var i = left;
   var j = right;
 
+  // determines when all of the items in the array range have been processed
   while (i <= j) {
     while (arr[i] < pivot) {
       i++;
@@ -29,6 +30,20 @@ function partition(arr, left, right) {
   return i;
 }
 
-module.exports = function sort(arr) {
-  // TODO
+module.exports = function sort(arr, left, right) {
+  left = typeof left === 'number' ? left : 0;
+  right = typeof right === 'number' ? right : arr.length - 1;
+
+  if (arr.length > 1) {
+    var index = partition(arr, left, right);
+
+    if (left < index - 1) {
+        sort(arr, left, index - 1);
+    }
+
+    if (index < right) {
+        sort(arr, index, right);
+    }
+  }
+  return arr;
 };

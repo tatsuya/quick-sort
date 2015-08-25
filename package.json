@@ -1,6 +1,6 @@
 {
   "name": "quick-sort",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Quick Sort implementation",
   "scripts": {
     "test": "mocha --reporter spec"
